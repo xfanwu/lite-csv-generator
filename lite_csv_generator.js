@@ -26,7 +26,6 @@ function randomStr() {
 function row (columnNb, delimiter) {
   let row = [];
   delimiter = delimiter || ',';
-  console.log(delimiter);
 
   while (row.length < columnNb)
       row.push(randomStr());

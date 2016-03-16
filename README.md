@@ -3,10 +3,10 @@ Lite CSV generator
 
 # Usage
 
-```node lite_csv_genrator 3 10```
+```node lite_csv_genrator file_path columns rows separator```
 
-Creating a 3 columns and 10 rows csv.
+# Example
 
-```node lite_csv_genrator 5 90 \|```
+```node lite_csv_genrator my.csv 5 90 \|```
 
-Creating a 5 columns and 90 rows csv with separator "|" (comma by default).
+Creating a 5 columns and 90 rows csv with separator "|" (comma ).
