@@ -1,11 +1,11 @@
 Lite CSV generator
 ==================
 
-# Usage
+## Usage
 
 ```node lite_csv_genrator file_path columns rows separator```
 
-# Example
+##Example
 
 ```node lite_csv_genrator my.csv 5 90 \|```
 
