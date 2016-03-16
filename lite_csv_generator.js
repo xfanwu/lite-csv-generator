@@ -23,27 +23,30 @@ function randomStr() {
 }
 
 // Generate row from random strings
-function row (columnNb) {
+function row (columnNb, delimiter) {
   let row = [];
+  delimiter = delimiter || ',';
+  console.log(delimiter);
 
   while (row.length < columnNb)
       row.push(randomStr());
 
-  return row.join();
+  return row.join(delimiter);
 }
 
 // Create file to current directory.
-function run(columnNb, rowNb, delimiter) {
+function run(fileName, columnNb, rowNb, delimiter) {
   let file = [];
 
   while (file.length < rowNb)
-    file.push(row(columnNb));
+    file.push(row(columnNb, delimiter));
 
-  let url = path.join(process.argv[1], '..', 'new_csv_file.csv');
+  let url = path.join(process.argv[1], '..', fileName);
 
   fs.writeFile(url, file.join('\n'), (err) => {
     if (err) throw new Error(err);
   });
 }
 
-run(process.argv[2], process.argv[3]);
+run(process.argv[2], process.argv[3], process.argv[4], process.argv[5]);
+
